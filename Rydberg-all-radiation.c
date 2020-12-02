@@ -3,7 +3,7 @@
 int Hspectrum(int);
 int main(){
 	int series;
-printf(" Hydrogen Spectrum");
+printf("\t\t    @Hydrogen Spectrum");
 printf("\n [1]Lyman");
 printf("\n [2]Balmer");
 printf("\n [3]Paschen");
@@ -13,7 +13,17 @@ scanf("%d",&series);
 Hspectrum(series);
 }
 int Hspectrum(int series){
-	 
+	const int bamerConst=109677;
+	float none=series;
+	float ntwo=(none+1);
+	double wavelenght;
+	double nFraction;
+	while(1){
+	nFraction=(((ntwo*ntwo)-(none*none))/(none*none*ntwo*ntwo))*(bamerConst);
+	wavelenght=((1)/(nFraction))*10000000;
+	printf("\n WAVELENGTH (λ)==%f  nm",wavelenght);
+    //system("sleep 0.6");
+	ntwo++;
+	}
+}
 	
-	return 0;
-	} 
